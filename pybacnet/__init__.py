@@ -16,19 +16,19 @@ class PyBacNet(object):
 			return Exception('Wacnet Connection Error')
 
 	def get_device_list(self):
-		uri = self.api_uri + '/devices'
+		uri = self.api_uri + '/bacnet/devices'
 		return self.call_wacnet(uri)
 
 	def get_device_detail(self, device_id):
-		uri = self.api_uri + '/devices/{device_id}'.format(device_id=device_id)
+		uri = self.api_uri + '/bacnet/devices/{device_id}'.format(device_id=device_id)
 		return self.call_wacnet(uri)
 
 	def get_object_list(self, device_id):
-		uri = self.api_uri + '/devices/{device_id}/objects'.format(device_id=device_id)
+		uri = self.api_uri + '/bacnet/devices/{device_id}/objects'.format(device_id=device_id)
 		return self.call_wacnet(uri)
 
 	def get_object_detail(self, device_id, object_id):
-		uri = self.api_uri + '/devices/{device_id}/objects/{object_id}'.format(device_id=device_id, object_id=object_id)
+		uri = self.api_uri + '/bacnet/devices/{device_id}/objects/{object_id}'.format(device_id=device_id, object_id=object_id)
 		return self.call_wacnet(uri)
 
 
